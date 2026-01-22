@@ -1,2 +1,3 @@
-# Cruiser
-Complete code for the Cruiser task - Testing Bias experiment 
+# Ayo Alisson
+Nombre: Alisson Ayo
+NRC: 28482
