@@ -18,5 +18,5 @@ public class Speedometer {
 		return currentSpeed;
 		
 	}
-
+	
 }

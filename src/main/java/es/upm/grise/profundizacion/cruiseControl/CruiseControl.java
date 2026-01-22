@@ -10,14 +10,27 @@ public class CruiseControl {
 	/*
 	 * Constructor
 	 */
-	public CruiseControl(Speedometer speedometer) {}
-	
-	
+	public CruiseControl(Speedometer speedometer) {
+        this.speedometer = speedometer;
+        this.speedSet = null;
+        this.speedLimit = null;
+    }
+
 	
 	/*
 	 * Method to code / test
 	 */
-	public void setSpeedSet(int speedSet) {}
+	public void setSpeedSet(int speedSet) throws IncorrectSpeedSetException, SpeedSetAboveSpeedLimitException {
+		if (speedSet <= 0) {
+            throw new IncorrectSpeedSetException("Speed set must be positive");
+        }
+
+        if (this.speedLimit != null && speedSet > this.speedLimit) {
+            throw new SpeedSetAboveSpeedLimitException("Speed set cannot exceed speed limit");
+        }
+
+        this.speedSet = speedSet;
+	}
 	
 	
 
